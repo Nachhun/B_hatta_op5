@@ -1,3 +1,5 @@
 node_modules/
 for_invitation_full/
 extracted_pages/
+
+.vercel

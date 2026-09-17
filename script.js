@@ -22,22 +22,29 @@ function initScrollReveals() {
   const reveals = document.querySelectorAll('[data-reveal]');
   if (!reveals.length) return;
 
+  if (!('IntersectionObserver' in window)) {
+    reveals.forEach(el => el.classList.add('revealed'));
+    return;
+  }
+
   const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach((entry, idx) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // Subtle staggered entrance
-        setTimeout(() => {
-          entry.target.classList.add('revealed');
-        }, idx * 60);
+        entry.target.classList.add('revealed');
         obs.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -40px 0px'
+    threshold: 0.01,
+    rootMargin: '100px 0px 100px 0px'
   });
 
   reveals.forEach(el => observer.observe(el));
+
+  // Safety fallback: reveal everything after 2 seconds in case of any observer glitch
+  setTimeout(() => {
+    reveals.forEach(el => el.classList.add('revealed'));
+  }, 2000);
 }
 
 /* ==========================================================================
