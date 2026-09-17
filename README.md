@@ -1,1 +1,1 @@
-# vanpich_hathaInvitation
+# vanpich_hathaInvitation_no_countdown
