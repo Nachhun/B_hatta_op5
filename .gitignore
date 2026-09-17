@@ -3,3 +3,4 @@ for_invitation_full/
 extracted_pages/
 
 .vercel
+.env*
