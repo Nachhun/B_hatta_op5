@@ -316,9 +316,9 @@ body {
 
 .monogram-letters {
   font-family: var(--font-serif);
-  font-size: 1.45rem;
+  font-size: clamp(0.95rem, 3.4vw, 1.35rem);
   font-weight: 700;
-  letter-spacing: 0.34em;
+  letter-spacing: 0.18em;
   display: block;
 }
 
