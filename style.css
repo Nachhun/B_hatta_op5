@@ -1909,7 +1909,7 @@ body {
 
 .footer-monogram {
   font-size: 1.1rem;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.15em;
   color: var(--gold-light);
   margin-bottom: 6px;
   font-weight: 700;
@@ -2078,8 +2078,8 @@ body {
 
 .nav-monogram {
   font-family: var(--font-serif);
-  font-size: 1.4rem;
-  letter-spacing: 0.28em;
+  font-size: clamp(1rem, 4vw, 1.25rem);
+  letter-spacing: 0.15em;
   color: var(--gold-light);
   font-weight: 700;
 }
@@ -2692,7 +2692,7 @@ body {
   font-family: var(--font-serif);
   font-size: 1.4rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
   color: var(--gold-light);
   margin-bottom: 8px;
 }
