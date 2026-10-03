@@ -196,9 +196,9 @@ function initCalendarEvent() {
       'Dress code: Formal / Semi-Formal (Kindly avoid white and ivory).';
     const location = 'Christchurch & Darfield, Canterbury, New Zealand';
 
-    // Dates in UTC: NZDT is UTC+13. 22 Nov 2026 10:30 AM = 21 Nov 2026 21:30 UTC
-    const startUtc = '20261121T213000Z';
-    const endUtc = '20261122T103000Z';
+    // Dates in UTC: AEDT is UTC+11. 22 Nov 2026 10:30 AM AEDT = 21 Nov 2026 23:30 UTC
+    const startUtc = '20261121T233000Z';
+    const endUtc = '20261122T123000Z';
 
     const gcalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startUtc}/${endUtc}&details=${encodeURIComponent(description)}&location=${encodeURIComponent(location)}`;
 
